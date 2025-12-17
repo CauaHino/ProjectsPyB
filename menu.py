@@ -139,14 +139,14 @@ def listar():
                 sleep(4)
         elif tecla == ord('B') or tecla == ord('b'):
             curses.endwin()
-            retorno = subprocess.run(["bash", "./scriptBash/editar.sh", str(ruta), str(elementos[seleccion])])
+            retorno = subprocess.run(["bash", "./scriptBash/editar.sh", str(ruta),str(elementos[seleccion])])
             print("Pulsa una tecla para continuar")
             if retorno.returncode == 10:
                 print("No fue posible actualziar la categoria")
-                sleep(4)
+                sleep(10)
             elif retorno.returncode == 0:
                 print("Categoria actualizada con exito!")
-                sleep(4)
+                sleep(10)
 
 
 def menu(terminal):
